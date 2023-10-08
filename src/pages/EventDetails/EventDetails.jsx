@@ -12,15 +12,13 @@ const EventDetails = () => {
   const events = useLoaderData()
   const [event , setEvent] = useState({})
   const {user} = useAuth()
-  console.log(user.email)
-  console.log(event)
+ 
   useEffect(() => {
     const findEvent =  events?.find((event) => event.id === idInt)
     setEvent(findEvent)
   }, [])
 
   const handelTicket = () =>{
-    console.log('ticket')
     const addedTicket = [];
 
     const ticketList = JSON.parse(localStorage.getItem(`${user.email}`));

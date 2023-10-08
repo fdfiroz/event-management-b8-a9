@@ -21,7 +21,6 @@ const ContactUs = () => {
         // }
         emailjs.sendForm('service_sqme5av', 'template_cwaszsc', form.current, 'LuWs-7AD-MLnv4uSK')
             .then((result) => {
-                console.log(result.text);
                 toast.success("Email Send")
             }, (error) => {
                 toast.error(error.text);
