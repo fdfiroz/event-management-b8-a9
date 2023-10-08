@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom"
 import EventSection from "../../Components/EventSection/EventSection"
 import { FeatureSection } from "../../Components/FeatureSection/FeatureSection"
+import { Helmet } from "react-helmet-async"
 
 
 const Home = () => {
   return (
+    
     <>
+    <Helmet>
+        <title>BizEvent | Home</title>
+    </Helmet>
     <section className="py-14 h-[85vh] bg-cover bg-no-repeat bg-center bg-[url('./bg.png')]">
             <div className="max-w-screen-xl mx-auto my-40 px-4 md:text-center md:px-8">
                 <div className="max-w-xl md:mx-auto">

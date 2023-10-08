@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom"
 import { FaLocationDot, FaCalendarDay, FaClock, FaCircleDollarToSlot } from "react-icons/fa6";
 import useAuth from "../../hooks/useAuth"
 import toast from "react-hot-toast";
+import { Helmet } from 'react-helmet-async';
 
 
 const EventDetails = () => {
@@ -45,6 +46,10 @@ const EventDetails = () => {
   }
   
   return (
+   <>
+   <Helmet>
+      <title>{events.eventName}</title>
+   </Helmet>
     <div className="bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black py-6 sm:py-8 lg:py-12 text-left">
   <div className="mx-auto max-w-screen-lg px-4 md:px-8">
     <div className="w-full h-96 mb-6 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:mb-8">
@@ -81,6 +86,7 @@ const EventDetails = () => {
   </div>
 
 </div>
+</>
   )
 }
 

@@ -11,6 +11,9 @@ const Navbar = () => {
     <li key={2}>
       <NavLink to={"/events"}>Events</NavLink>
     </li>,
+    <li key={3}>
+    <NavLink to={"/contact"}>Contact with us</NavLink>
+  </li>,
   ];
   return (
     <>

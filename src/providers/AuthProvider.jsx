@@ -33,9 +33,11 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithPopup(auth, githubProvider);
     }
-    const handleUpdateProfile = (name, photo = "./avater.png") => {
+    const handleUpdateProfile = (name, photo = "./avater.png", phone = null ) => {
         return updateProfile(auth.currentUser, {
-            displayName: name, photoURL: photo
+            displayName: name, 
+            photoURL: photo,
+            phoneNumber: phone
         })
     }
 

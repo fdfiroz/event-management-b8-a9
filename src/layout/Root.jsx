@@ -4,6 +4,7 @@ import { Toaster } from "react-hot-toast"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Footer from "../Components/Footer/Footer";
 
 const Root = () => {
   useEffect(() => {
@@ -13,6 +14,7 @@ const Root = () => {
   return (<>
     <Navbar></Navbar>
     <Outlet></Outlet>
+    <Footer></Footer>
     <Toaster/>
     
 

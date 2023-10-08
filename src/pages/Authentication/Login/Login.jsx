@@ -4,6 +4,7 @@ import useAuth from "../../../hooks/useAuth"
 import toast from "react-hot-toast"
 import { useState } from "react"
 import { FaEyeSlash, FaEye} from "react-icons/fa6";
+import { Helmet } from "react-helmet-async"
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +40,11 @@ const Login = () => {
 
   }
   return (
+
+    <>
+    <Helmet>
+      <title>Login | Social Login</title>
+    </Helmet>
     <div className="hero min-h-screen bg-base-200">
   <div className="hero-content px-16 flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
@@ -88,6 +94,7 @@ const Login = () => {
     </div>
   </div>
 </div>
+</>
   )
 }
 

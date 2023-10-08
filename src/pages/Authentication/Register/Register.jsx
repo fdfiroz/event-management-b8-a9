@@ -4,6 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { FaEyeSlash, FaEye} from "react-icons/fa6";
+import { Helmet } from 'react-helmet-async';
 
 
 const Register = () => {
@@ -43,6 +44,10 @@ const [showPassword, setShowPassword] = useState(false);
 
   }
   return (
+    <>
+    <Helmet>
+      <title>Register | Social Login</title>
+    </Helmet>
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content px-16 flex-col lg:flex-row">
         <div className="text-center lg:text-left">
@@ -113,6 +118,7 @@ const [showPassword, setShowPassword] = useState(false);
         </div>
       </div>
     </div>
+    </>
   );
 };
 
