@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Events from "../pages/Events/Events";
 import EventDetails from "../pages/EventDetails/EventDetails";
 import MyTickets from "../pages/MyTickets/MyTickets";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 
 const myCreatedRoute =  createBrowserRouter([
@@ -30,6 +31,10 @@ const myCreatedRoute =  createBrowserRouter([
             {
                 path : "/register",
                 element: <Register></Register>,
+            },
+            {
+                path : "/contact",
+                element: <ContactUs></ContactUs>,
             },
             {
                 path: "/profile",
