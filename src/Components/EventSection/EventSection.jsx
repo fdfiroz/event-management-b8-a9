@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import HomeEventCard from "./HomeEventCard/HomeEventCard"
+import HomeEventCard from "../HomeEventCard/HomeEventCard"
 import { Link } from "react-router-dom"
 
 

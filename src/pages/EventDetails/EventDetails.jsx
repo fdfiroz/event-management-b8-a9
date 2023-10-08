@@ -77,7 +77,7 @@ const EventDetails = () => {
     <div className='flex mt-4 mb-2 place-items-center'><FaLocationDot></FaLocationDot><span className="ml-1">{event.location}</span></div>
     <div className='flex  mb-2 place-items-center'><FaCalendarDay></FaCalendarDay><span className="mx-1">{event.date}</span> <FaClock className="ml-4"></FaClock><span className="ml-1">{event.time}</span></div>
     <div className='flex  mb-2 place-items-center'><FaCircleDollarToSlot></FaCircleDollarToSlot><span className="mx-1">{event.ticketPrice}/per Ticket</span></div>
-  <button onClick={handelTicket} className="btn btn-primary btn-wide">Buy Now</button>
+  <button onClick={handelTicket} className="btn btn-primary bg-pink-600 hover:bg-pink-700 btn-wide">Buy Now</button>
   </div>
 
 </div>

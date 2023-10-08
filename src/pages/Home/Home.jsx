@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import EventSection from "../../Components/EventSection"
+import EventSection from "../../Components/EventSection/EventSection"
 import { FeatureSection } from "../../Components/FeatureSection/FeatureSection"
 
 
