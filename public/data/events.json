@@ -1,0 +1,144 @@
+[
+  {
+    "id": 1,
+    "eventName": "Corporate Conference 2023",
+    "date": "10-Oct-2023",
+    "time": "09:00 AM - 05:00 PM",
+    "location": "Grand Convention Center",
+    "speakers": [
+      {
+        "name": "James Killer",
+        "image": "/speaker1.jpg"
+      },
+      {
+        "name": "Melisa Rock",
+        "image": "/speaker2.jpg"
+      }
+    ],
+    "description": "Join us for a day of insightful talks and networking opportunities.",
+    "ticketPrice": 99.99,
+    "image": "/event-1.jpg",
+    "type": "Biz Event"
+  },
+  {
+    "id": 2,
+    "eventName": "Tech Expo Summit",
+    "date": "11-Oct-2023",
+    "time": "10:30 AM - 06:00 PM",
+    "location": "Tech Hub Arena",
+    "speakers": [
+      {
+        "name": "Agaton Ronald",
+        "image": "/speaker3.jpg"
+      },
+      {
+        "name": "Devid Arone",
+        "image": "/speaker4.jpg"
+      },
+      {
+          "name": "Lucy Melisa",
+          "image": "/speaker5.jpg"
+      }
+    ],
+    "description": "Explore the latest in technology and innovation at this expo.",
+    "ticketPrice": 79.99,
+    "image": "/event-2.jpg",
+    "type": "Tech Events"
+  },
+  {
+    "id": 3,
+    "eventName": "Leadership Seminar",
+    "date": "12-Oct-2023",
+    "time": "08:30 AM - 04:30 PM",
+    "location": "Executive Plaza",
+    "speakers": [
+      {
+          "name": "Fredric Martin",
+          "image": "/speaker6.jpg"
+      },
+      {
+          "name": "Laura Bryant",
+          "image": "/speaker7.jpg"
+      },
+      {
+          "name": "Henri Robert",
+          "image": "/speaker8.jpg"
+      }
+    ],
+    "description": "Enhance your leadership skills with expert guidance and workshops.",
+    "ticketPrice": 129.99,
+    "image": "/event-3.jpg",
+    "type": "Biz Event"
+  },
+  {
+    "id": 4,
+    "eventName": "Marketing Masterclass",
+    "date": "13-Oct-2023",
+    "time": "10:00 AM - 03:30 PM",
+    "location": "Marketing Institute",
+    "speakers": [
+      {
+          "name": "James Killer",
+          "image": "/speaker1.jpg"
+      },
+      {
+          "name": "Melisa Rock",
+          "image": "/speaker2.jpg"
+      }
+    ],
+    "description": "Learn the latest marketing strategies and tactics from industry experts.",
+    "ticketPrice": 89.99,
+    "image": "/event-4.jpg",
+    "type": "Biz Event"
+  },
+  {
+    "id": 5,
+    "eventName": "Finance Symposium",
+    "date": "14-Oct-2023",
+    "time": "09:00 AM - 05:30 PM",
+    "location": "Financial Center",
+    "speakers": [
+      {
+          "name": "Agaton Ronald",
+          "image": "/speaker3.jpg"
+        },
+        {
+          "name": "Devid Arone",
+          "image": "/speaker4.jpg"
+        },
+        {
+            "name": "Lucy Melisa",
+            "image": "/speaker5.jpg"
+        }
+    ],
+    "description": "Gain insights into financial management and investment strategies.",
+    "ticketPrice": 109.99,
+    "image": "/event-5.jpg",
+    "type": "Biz Event"
+  },
+  {
+    "id": 6,
+    "eventName": "Product Launch Gala",
+    "date": "15-Oct-2023",
+    "time": "07:00 PM - 10:00 PM",
+    "location": "Luxury Hotel Ballroom",
+    "speakers": [
+      {
+          "name": "Fredric Martin",
+          "image": "/speaker6.jpg"
+      },
+      {
+          "name": "Laura Bryant",
+          "image": "/speaker7.jpg"
+      },
+      {
+          "name": "Henri Robert",
+          "image": "/speaker8.jpg"
+      }
+    ],
+    "description": "Be part of an exclusive product launch event with networking and entertainment.",
+    "ticketPrice": 149.99,
+    "image": "/event-6.jpg",
+    "type": "Biz Event"
+  }
+]

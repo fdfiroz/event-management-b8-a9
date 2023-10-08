@@ -10,7 +10,8 @@ const Navbar = () => {
     </li>,
     <li key={2}>
       <NavLink to={"/events"}>Events</NavLink>
-    </li>];
+    </li>,
+  ];
   return (
     <>
       <Headroom>
@@ -40,7 +41,7 @@ const Navbar = () => {
                 {menus}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+            <Link to={"/"} className="btn btn-ghost normal-case text-xl"><img className="w-auto h-3/4" src="/logo.png" alt="" /></Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{menus}</ul>
@@ -64,7 +65,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <a>My Tickets</a>
+                    <NavLink to={"/my-tickets"}>My Tickets</NavLink>
                   </li>
                   <li onClick={logOut}>
                     <a>Logout</a>

@@ -2,19 +2,32 @@ import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../../Components/ExtraLogin/SocialLogin";
 import useAuth from "../../../hooks/useAuth";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import { FaEyeSlash, FaEye} from "react-icons/fa6";
+
 
 const Register = () => {
   const { createUser, handleUpdateProfile } = useAuth();
   const navigate = useNavigate();
-
+const [showPassword, setShowPassword] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault()
     const form = new FormData(e.currentTarget)
     const name  = form.get("name")
     const email = form.get('email');
     const password = form.get('password');
-    console.log(name, email, password);
-
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long.");
+      return;
+    }
+      if (!/[A-Z]/.test(password)) {
+        toast.error("Password must contain at least one capital letter.");
+      return;
+    }
+    if (!/[!@#$%^&*()]/.test(password)) {
+      toast.error("Password must contain at least one special character.");
+      return;
+    }
     createUser(email, password)
             .then(res => {
                 handleUpdateProfile(name)
@@ -66,17 +79,24 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
+              <div></div>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 placeholder="Password"
                 className="input input-bordered"
                 required
               />
+              <span className="absolute top-[3.2rem] right-4" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+
+                        </span>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?

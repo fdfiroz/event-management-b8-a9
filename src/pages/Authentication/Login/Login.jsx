@@ -1,12 +1,41 @@
 import { Link } from "react-router-dom"
 import SocialLogin from "../../../Components/ExtraLogin/SocialLogin"
+import useAuth from "../../../hooks/useAuth"
+import toast from "react-hot-toast"
+import { useState } from "react"
+import { FaEyeSlash, FaEye} from "react-icons/fa6";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const { signIn } = useAuth()
   const handleSubmit = (e) => {
     e.preventDefault()
     const form = new FormData(e.currentTarget)
     const email = form.get('email');
     const password = form.get('password');
+
+    if (password.length < 6) {
+      toast.error("The password must be at least 6 characters long.");
+      return;
+    }
+      if (!/[A-Z]/.test(password)) {
+        toast.error("The password must contain at least one capital letter.");
+      return;
+    }
+    if (!/[!@#$%^&*()]/.test(password)) {
+      toast.error("The password must contain at least one special character.");
+      return;
+    }
+
+    signIn(email, password)
+    .then(res => {
+        toast.success('User logged in successfully');
+        navigate('/')
+    })
+    .catch(error => {
+        toast.error(error.message)
+    })
 
   }
   return (
@@ -24,15 +53,30 @@ const Login = () => {
           </label>
           <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Password</span>
-          </label>
-          <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
-        </div>
+        <div className="form-control relative">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <div></div>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Password"
+                className="input input-bordered"
+                required
+              />
+              <span className="absolute top-[3.2rem] right-4" onClick={() => setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+
+                        </span>
+              <label className="label">
+                <a href="#" className="label-text-alt link link-hover">
+                  Forgot password?
+                </a>
+              </label>
+            </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary" type="submit">Login</button>
         </div>
