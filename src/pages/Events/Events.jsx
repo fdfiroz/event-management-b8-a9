@@ -11,7 +11,7 @@ const Events = () => {
     <Helmet>
       <title>Events List</title>
     </Helmet>
-    <div className='grid grid-cols-1 gap-8'>
+    <div className='grid grid-cols-1 gap-8 my-8'>
         {
             events?.map((event) =>  <EventCard key={event.id} event={event}></EventCard>
             )

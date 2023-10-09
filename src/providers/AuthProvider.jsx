@@ -37,6 +37,7 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, {
             displayName: name, 
             photoURL: photo,
+            // feature: future update phone number
             phoneNumber: phone
         })
     }
