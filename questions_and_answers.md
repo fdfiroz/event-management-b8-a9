@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: C: `undefined`
+#### Answer: A: `{}`
 
-<i>greetign is not define</i>
+<i>greetign is not define its refer a empty obj</i>
 
 </p>
 </details>
@@ -43,9 +43,9 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: "12"
 
-<i>Write your explanation here</i>
+<i>One value is string thats why '+' operator concatenated</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
-<i>Write your explanation here</i>
+<i>"info.favoriteFood" doesn't affect the original 'food' array. info is another object</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B: `Hi there, undefined`
 
-<i>Write your explanation here</i>
+<i>'sayHi' function expects an argument 'name', but it is not provided when calling the function</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C: 3
 
-<i>Write your explanation here</i>
+<i>'if (num)' checks if num is truthy (non-zero). There are three truthy values "(1, 2, and 3)" in the array, so count is incremented three times, resulting in '3'</i>
 
 </p>
 </details>

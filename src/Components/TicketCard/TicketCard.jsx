@@ -18,12 +18,12 @@ const TicketCard = ({ ticket }) => {
                     <h4 className="text-gray-400 font-semibold">{ticket.eventName}</h4>
                     <p className="text-gray-300 text-sm">{ticket.description}</p>
                 </div>
-                <label htmlFor={ticket.id} className="btn text-gray-400 text-sm border rounded-lg px-3 py-2 duration-150 hover:bg-gray-100">Event Date</label>
+                <label htmlFor={ticket.id} className="btn text-gray-400 text-sm border rounded-lg px-3 py-2 duration-150 hover:bg-gray-100">Event Date And QR Code</label>
 
                 <input type="checkbox" id={ticket.id} className="modal-toggle" />
                 <div className="modal">
                     <div className="modal-box">
-                        <h3 className="text-lg font-bold">{ticket.eventName}</h3>
+                        <h3 className="text-lg font-bold">{ticket.eventName}</h3>   
                         <p className="py-4">You Event Date:{ticket.date}</p>
                         <p>Please Scan that QR</p>
                         <QRCodeSVG
